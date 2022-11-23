@@ -43,7 +43,7 @@ def push_plus(title, content):
 # Bark推送
 def bark(title, content):
     if not GlobalVariable.BARK:
-        print("bark服务的bark_token未设置!!")
+        print("bark服务的device_key未设置!!")
         return
     res = requests.get(
         f"""https://api.day.app/{GlobalVariable.BARK}/{title}/{content}""")
