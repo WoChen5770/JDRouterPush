@@ -54,8 +54,8 @@ def bark(title, content):
         "body": content
     }
     push_plus_url = 'https://'+push_server+'/push'
-    print(push_plus_url)
     res = requests.post(url=push_plus_url,params=params)
+    print(res)
     if res.status_code == 200:
         print("bark推送成功!")
     else:
