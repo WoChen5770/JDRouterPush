@@ -47,7 +47,7 @@ def bark(title, content):
         print("bark服务的bark_token未设置!!")
         return
     if not GlobalVariable.BARK_SERVER:
-        push_server = "https://api.day.app"
+        push_server = "api.day.app"
 
     params = {
         "device_key": GlobalVariable.BARK,
