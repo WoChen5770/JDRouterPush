@@ -44,7 +44,7 @@ def push_plus(title, content):
 def bark(title, content):
     push_server = GlobalVariable.BARK_SERVER
     if not GlobalVariable.BARK:
-        print("bark服务的bark_token未设置!!")
+        print("bark服务的device_key未设置!!")
         return
     if not GlobalVariable.BARK_SERVER:
         push_server = "api.day.app"
