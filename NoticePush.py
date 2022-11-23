@@ -48,13 +48,14 @@ def bark(title, content):
         return
     if not GlobalVariable.BARK_SERVER:
         push_server = "api.day.app"
-
     params = {
         "device_key": GlobalVariable.BARK,
         "title": title,
         "body": content
     }
-    res = requests.post(url='https://'+push_server+'/push',params=params)
+    push_plus_url = 'https://'+push_server+'/push'
+    print(push_plus_url)
+    res = requests.post(url=push_plus_url,params=params)
     if res.status_code == 200:
         print("bark推送成功!")
     else:
